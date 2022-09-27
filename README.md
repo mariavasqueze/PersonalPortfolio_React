@@ -8,10 +8,12 @@ HTML, CSS, JavaScript, React, Node, Java, Firebase, MongoDB
 
 ## Projects you'll find: 
 
-#### React/Redux online store
-#### NODE JS - NASA API project
-#### Python Project - Under Construction
-#### Java Web application - Happy Hour Locator - Under Construction
+#### - React/Redux online store
+#### - NODE JS - NASA API project
+#### - Python Project - Under Construction
+#### - Java Web application - Happy Hour Locator - Under Construction
+
+
 
 Thank you for taking the time to read this!
 -Maria
