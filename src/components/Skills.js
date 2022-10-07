@@ -4,7 +4,6 @@ import JavaScript from "../assets/img/javascript.png";
 import ReactImg from "../assets/img/react.png";
 import Node from "../assets/img/node.png";
 import Firebase from "../assets/img/firebase.png";
-import Tailwind from "../assets/img/tailwind.png";
 import Java from "../assets/img/java-logo.png"
 import Mongo from "../assets/img/mongo.png";
 

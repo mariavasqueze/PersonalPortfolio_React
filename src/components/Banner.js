@@ -12,14 +12,14 @@ const Banner = () => {
 	const [loopNum, setLoopNum] = useState(0);
 	const [isDeleting, setIsDeleting] = useState(false);
 	const toRotate = [
-		"React Developer",
-		"Front End Developer",
 		"Programmer",
+		"Front-End Developer",
 		"Coder",
+		"React Developer",
 	];
 	const [text, setText] = useState("");
-	const [delta, setDelta] = useState(300);
-	const period = 2000;
+	const [delta, setDelta] = useState(400);
+	const period = 400;
 
 	useEffect(() => {
 		let ticker = setInterval(() => {
@@ -40,9 +40,9 @@ const Banner = () => {
 
 		setText(updatedtext);
 
-		if (isDeleting) {
-			setDelta((prevDelta) => prevDelta / 2);
-		}
+		// if (isDeleting) {
+		// 	setDelta((prevDelta) => prevDelta / 2);
+		// }
 
 		if (!isDeleting && updatedtext === fullText) {
 			setIsDeleting(true);
@@ -50,7 +50,7 @@ const Banner = () => {
 		} else if (isDeleting && updatedtext === "") {
 			setIsDeleting(false);
 			setLoopNum(loopNum + 1);
-			setDelta(500);
+			setDelta(200);
 		}
 	};
 
@@ -64,12 +64,12 @@ const Banner = () => {
 							<div className={isVisible ? "animated_animated animate_fadeIn" : ""}>
 								<span className="tagline">Welcome to my portfolio!</span>
 								<h1>
-									{`I'm a Software Developer / `}
+									{`I'm a Full-Stack Developer / `}
 									<span className="wrap">{text}</span>
 								</h1>
 								<p>
-									My name is Maria, I'm a software developer focused on
-									front-end programming. Please scroll down to see my skills and
+									My there! my name is Maria, I'm a full-stack developer focused on
+									React and web development. Please scroll down to see my skills and
 									top projects!
 								</p>
 								<a className="text-decoration-none" href="#project">
@@ -82,7 +82,7 @@ const Banner = () => {
 						</TrackVisibility>
 					</Col>
 					<Col xs={12} md={6} xl={5}>
-						<img src={headerImg} alt="astronaut coding in computer" />
+						<img className="astronaut-img" src={headerImg} alt="astronaut coding in computer" />
 					</Col>
 				</Row>
 			</Container>

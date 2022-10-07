@@ -1,6 +1,4 @@
-import { Col, Row } from "react-bootstrap";
-
-import projImg1 from "../assets/img/project-img1.png";
+import { Col } from "react-bootstrap";
 
 
 const ProjectCard = (project) => {
@@ -11,7 +9,7 @@ const ProjectCard = (project) => {
         <div className="proj-txtx">
         <div>
           <h4>{project.title}</h4>
-          <span>{project.description}</span>
+          <span className="description">{project.description}</span>
         </div>
           <div className="button-box">
           <a className="project-button" href={project.demo} target="_blank">

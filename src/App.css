@@ -81,6 +81,12 @@ p, a, li, button, ul {
   .logo-img {
     max-width: 80px;
   }
+
+  @media (max-width:1700px) {
+    .astronaut-img {
+      padding: 40px 0px;
+    }
+}
   /************ Navbar Css ************/
   nav.navbar {
     padding: 18px 0;
@@ -196,6 +202,7 @@ p, a, li, button, ul {
   nav.navbar .navbar-toggler:focus {
       outline: none;
       box-shadow: none;
+      padding: 10px 0px;
   }
   nav.navbar .navbar-toggler-icon {
     width: 24px;
@@ -226,12 +233,10 @@ p, a, li, button, ul {
   }
   nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
       transform: rotate(45deg);
-      background-color: #fff;
       height: 2px;
   }
   nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
-      transform: translateY(8px) rotate(-45deg);
-      background-color: #fff;
+      transform: translateY(35px) rotate(-45deg);
       height: 2px;
   }
   nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
@@ -375,16 +380,31 @@ p, a, li, button, ul {
     width: 56%;
   }
 
+  /* ////////////////////////////////////////////// */
+  /* .project-block {
+    max-height: 360px;
+    width: auto;
+  } */
+
   .proj-imgbx {
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     overflow: hidden;
-    margin-bottom: 24px;
     position: relative;
     border-radius: 30px;
+    min-height: 250px;
     max-height: 350px;
   }
 
+  .proj-imgbx img{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    min-height: 360px;
+  }
+
+  /* box effects */
   .proj-imgbx::before {
     content: "";
     background: linear-gradient(90.21deg, #9b9397 -2.91%, #232526 111.58%);
@@ -397,27 +417,45 @@ p, a, li, button, ul {
   .proj-imgbx:hover::before {
     height: 100%;
   }
+  .proj-imgbx:hover{
+    display: relative;
+    height: 100%;
+  }
   
-/* 
-  @media (min-width:1000px) {
-    .proj-imgbx img{
-      max-height: 350px;
+  @media (max-width:1000px) {
+    .proj-imgbx:hover::before {
       height: 100%;
     }
-} */
+    .proj-imgbx {
+      max-height: 250px;
+    }
+    .proj-imgbx img{
+      min-height: 250px;
+    }
+}
+
+/* /////////////////////////////////////////////// */
   .proj-txtx {
+    width: 80%;
     position: relative;
-    padding: 0px 10px;
-    left: 50%;
-    transform: translate(-50%, -140%);
+    padding-bottom: 10px;
+    transform: translate(8%, -120%);
     transition: 0.5s ease-in-out;
     opacity: 0;
-    width: 100%;
   }
+
+
+@media (max-width:580px) {
+  .proj-txtx {
+    transform: translate(8%, -140%);
+    padding-bottom: 0px;
+  }
+}
   .proj-imgbx:hover .proj-txtx {
-    top: 10%;
     opacity: 1;
   }
+
+  /* project box text */
   .proj-txtx h4 {
     font-size: 30px;
     font-weight: 700;
@@ -431,6 +469,16 @@ p, a, li, button, ul {
     margin-bottom: 40px;
   }
 
+  @media (max-width:1000px) {
+    .proj-txtx h4 {
+      font-size: 25px;
+    }
+    .description {
+      display: none;
+    }
+}
+
+  /* project box buttons */
   .button-box {
     margin-top: 40px;
   }
@@ -472,6 +520,12 @@ p, a, li, button, ul {
       position: absolute;
   }
 
+  @media (max-width:1000px) {
+    .project-button  {
+      padding: 12px 25px;
+    }
+}
+
   /************ Contact Css ************/
   .contact {
     background: linear-gradient(90.21deg, #4e56f19f -5.91%, #48b1cfee 111.58%);
@@ -488,8 +542,8 @@ p, a, li, button, ul {
   }
   .contact form input, .contact form textarea {
     width: 100%;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.8);
     border-radius: 20px;
     color: #fff;
     margin: 0 0 8px 0;
@@ -548,8 +602,19 @@ p, a, li, button, ul {
   .img-column{
     margin-left: 50px;
     margin-right: 30px;
+    max-width: 100%;
+
   }
-  
+  @media (max-width:1000px) {
+    .img-column {
+      margin-left: 0px;
+      margin-right: 0px;
+      padding-bottom: 30px;
+    }
+    .img-column img{
+      max-width: 80%;
+    }
+}
   /************ Footer Css ************/
   .footer {
     padding: 50px 0 50px 0;
