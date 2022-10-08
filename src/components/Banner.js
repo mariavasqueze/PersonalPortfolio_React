@@ -7,7 +7,6 @@ import headerImg from "../assets/img/CuteAstronautCoffee.svg";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
 
-
 const Banner = () => {
 	const [loopNum, setLoopNum] = useState(0);
 	const [isDeleting, setIsDeleting] = useState(false);
@@ -60,29 +59,38 @@ const Banner = () => {
 				<Row lassName="align-items-center">
 					<Col xs={12} md={6} xl={7}>
 						<TrackVisibility>
-						{({ isVisible }) =>
-							<div className={isVisible ? "animated_animated animate_fadeIn" : ""}>
-								<span className="tagline">Welcome to my portfolio!</span>
-								<h1>
-									{`I'm a Full-Stack Developer / `}
-									<span className="wrap">{text}</span>
-								</h1>
-								<p>
-									My there! my name is Maria, I'm a full-stack developer focused on
-									React and web development. Please scroll down to see my skills and
-									top projects!
-								</p>
-								<a className="text-decoration-none" href="#project">
-								<button>
-									Go to Projects
-									<ArrowRightCircle size={25} />
-								</button>
-								</a>
-							</div>}
+							{({ isVisible }) => (
+								<div
+									className={
+										isVisible ? "animated_animated animate_fadeIn" : ""
+									}
+								>
+									<span className="tagline">Welcome to my portfolio!</span>
+									<h1>
+										{`I'm a Full-Stack Developer / `}
+										<span className="wrap">{text}</span>
+									</h1>
+									<p>
+										Hi there! my name is Maria, I'm a full-stack developer
+										focused on React and web development. Please scroll down to
+										see my skills and top projects!
+									</p>
+									<a className="text-decoration-none" href="#project">
+										<button>
+											Go to Projects
+											<ArrowRightCircle size={25} />
+										</button>
+									</a>
+								</div>
+							)}
 						</TrackVisibility>
 					</Col>
 					<Col xs={12} md={6} xl={5}>
-						<img className="astronaut-img" src={headerImg} alt="astronaut coding in computer" />
+						<img
+							className="astronaut-img"
+							src={headerImg}
+							alt="astronaut coding in computer"
+						/>
 					</Col>
 				</Row>
 			</Container>
