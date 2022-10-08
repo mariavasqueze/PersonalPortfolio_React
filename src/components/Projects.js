@@ -1,5 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
 import projImg1 from "../assets/img/project-img1.png";
+import projImg2 from "../assets/img/project2-nasa-img.png"
 import projImg3 from "../assets/img/coming-soon.jpeg";
 import projImg4 from "../assets/img/underConstruction.jpeg";
 
@@ -17,9 +18,9 @@ const Projects = () => {
 		{
 			title: "Node JS Rocket Tracker - Under Construction ",
 			description: "Connected the SpaceX API with a NASA mission control front-end to show all launches filtering the information to show which missions have been completed or aborted. All the data is saved on a MongoDB database. The user can also create & abort future missions to the Exoplanets from NASA’s data.",
-			imageUrl: projImg3,
-			demo: "/",
-			code: "/",
+			imageUrl: projImg2,
+			demo: "https://github.com/mariavasqueze/NodeJS_API_Nasa-Spacex", // change this later
+			code: "https://github.com/mariavasqueze/NodeJS_API_Nasa-Spacex",
 		},
 		{
 			title: "Python Project - Under Construction",
