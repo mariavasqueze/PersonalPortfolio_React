@@ -11,8 +11,8 @@ const Banner = () => {
 	const [loopNum, setLoopNum] = useState(0);
 	const [isDeleting, setIsDeleting] = useState(false);
 	const toRotate = [
-		"Programmer",
 		"Front-End Developer",
+		"Programmer",
 		"Coder",
 		"React Developer",
 	];
