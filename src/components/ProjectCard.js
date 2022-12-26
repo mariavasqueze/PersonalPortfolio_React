@@ -10,6 +10,8 @@ const ProjectCard = (project) => {
         <div>
           <h4>{project.title}</h4>
           <span className="description">{project.description}</span>
+          <br></br>
+          <span className="desc2">{project.desc2}</span>
         </div>
           <div className="button-box">
           <a className="project-button" href={project.demo} target="_blank">

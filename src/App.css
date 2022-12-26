@@ -468,19 +468,23 @@ p, a, li, button, ul {
     letter-spacing: 0.8px;
     margin-bottom: 40px;
   }
+  .desc2 {
+    color: #dddddd;
+    text-decoration: underline;
+  }
 
   @media (max-width:1000px) {
     .proj-txtx h4 {
       font-size: 25px;
     }
-    .description {
+    .description, .desc2 {
       display: none;
     }
 }
 
   /* project box buttons */
   .button-box {
-    margin-top: 40px;
+    margin-top: 30px;
   }
   .special-button{
     margin-left: 20px;
