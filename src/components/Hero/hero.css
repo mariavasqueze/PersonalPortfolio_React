@@ -1,0 +1,55 @@
+.hero-container {
+  padding: 0pxs;
+  background-color: #121212;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  letter-spacing: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.title {
+  font-family: "Anton-Regular", sans-serif;
+  text-transform: uppercase;
+  font-size: 3rem;
+  margin: 4px;
+}
+
+.title-two {
+  font-family: "Anton-Regular", sans-serif;
+  font-size: 2.5rem;
+  color: #272727;
+  margin-top: 20px;
+}
+
+.title-para {
+  /* font-family: "Anton-Regular", sans-serif; */
+  margin-top: 20px;
+
+  @media screen and (min-width: 769px) {
+    display: none;
+  }
+}
+.title-para a {
+  color: #272727;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  color: #272727;
+  text-decoration: underline;
+  cursor: pointer;
+}

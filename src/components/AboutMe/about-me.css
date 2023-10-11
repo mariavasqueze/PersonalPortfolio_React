@@ -1,0 +1,96 @@
+.about-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  gap: 20px;
+
+  @media screen and (min-width: 1025px) {
+    flex-direction: row;
+    gap: 40px;
+  }
+}
+.content-image {
+  margin-top: 12rem;
+
+  @media screen and (min-width: 450px) {
+    margin-top: 10rem;
+  }
+  @media screen and (min-width: 1025px) {
+    margin-top: 15rem;
+  }
+}
+.maria-image {
+  width: 120px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+
+  @media screen and (min-width: 450px) {
+    width: 180px;
+  }
+
+  @media screen and (min-width: 769px) {
+    width: 250px;
+    border-radius: 18px;
+  }
+  @media screen and (min-width: 1024px) {
+    width: 300px;
+    border-radius: 15px;
+    /* margin-top: 5.5rem; */
+  }
+  @media screen and (min-width: 1440px) {
+    width: 350px;
+    border-radius: 12px;
+  }
+}
+
+.text-wrapper {
+  margin: 10px;
+  padding: 20px 40px 0px;
+  max-width: 700px;
+
+  @media screen and (min-width: 1025px) {
+    padding: 20px 0px 0px;
+  }
+}
+
+.about-me-text {
+  font-size: 34px;
+  font-family: "Mona-Sans", sans-serif;
+  margin-bottom: 30px;
+  text-align: center;
+  @media screen and (min-width: 1025px) {
+    font-size: 38px;
+    text-align: left;
+    margin-top: 5.5rem;
+  }
+}
+
+.short {
+  text-decoration: underline;
+  text-decoration-color: #737373;
+}
+.desc-me {
+  font-size: 16px;
+  text-align: left;
+  line-height: 32px;
+  opacity: 0.9;
+  text-align: center;
+
+  @media screen and (min-width: 769px) {
+    font-size: 20px;
+  }
+
+  @media screen and (min-width: 1025px) {
+    font-size: 24px;
+    text-align: left;
+  }
+}
+.link {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-color: #737373;
+}
