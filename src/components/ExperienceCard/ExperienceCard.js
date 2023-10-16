@@ -12,7 +12,7 @@ function ExperienceCard({ experience }) {
         <motion.img
           initial={{ opacity: 0, y: -100 }}
           transition={{ duration: 1.2 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 10 }}
           viewport={{ once: true }}
           className="card-img"
           src={experience.companyImage}

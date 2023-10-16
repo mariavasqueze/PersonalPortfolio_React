@@ -32,7 +32,7 @@
     width: 180px;
   }
 
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: 768px) {
     width: 250px;
     border-radius: 18px;
   }
@@ -62,10 +62,14 @@
   font-family: "Mona-Sans", sans-serif;
   margin-bottom: 30px;
   text-align: center;
+  color: rgb(204, 204, 204);
   @media screen and (min-width: 1025px) {
-    font-size: 38px;
     text-align: left;
     margin-top: 5.5rem;
+  }
+
+  @media screen and (min-width: 1440px) {
+    margin-top: 10rem;
   }
 }
 
@@ -79,18 +83,18 @@
   line-height: 32px;
   opacity: 0.9;
   text-align: center;
+  color: rgb(190, 189, 189);
 
   @media screen and (min-width: 769px) {
     font-size: 20px;
   }
 
   @media screen and (min-width: 1025px) {
-    font-size: 24px;
     text-align: left;
   }
 }
 .link {
-  color: #fff;
+  color: rgb(131, 123, 123);
   text-decoration: underline;
   text-decoration-color: #737373;
 }

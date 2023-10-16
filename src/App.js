@@ -36,9 +36,6 @@ function App() {
         <section className="section" id="projects">
           <Projects />
         </section>
-        <section className="section" id="contact">
-          {/* contact me, just icons with click to go to socials, mail, phone */}
-        </section>
       </div>
     </div>
   );

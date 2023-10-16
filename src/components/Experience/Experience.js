@@ -45,7 +45,7 @@ const EXPERIENCES = [
     ],
   },
   {
-    position: "Front End Developer Intern",
+    position: "Front End Dev. Intern",
     company: "Sologenic",
     link: "https://sologenic.com/",
     companyImage: imageSolo,
@@ -128,7 +128,7 @@ function Experience() {
       id="experience"
       className="exp-wrapper"
     >
-      <h3 className="main-title experience-title">Experience</h3>
+      <h3 className="experience-title">Experience</h3>
       <div
         ref={experienceCardsRef}
         className="experience-cards"

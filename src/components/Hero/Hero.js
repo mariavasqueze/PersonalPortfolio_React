@@ -33,7 +33,7 @@ const Hero = () => {
 
   return (
     <div className="hero-container">
-      <SplineBackground />
+      <SplineBackground url="https://prod.spline.design/Pcz3HZiVYE9vnMhx/scene.splinecode" />
       <h1 className="title">Hi There!</h1>
       <h2 className="title">I'm Maria</h2>
       <h3 className="title-two">Software Developer</h3>

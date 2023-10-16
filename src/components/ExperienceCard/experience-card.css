@@ -9,17 +9,9 @@
   scroll-snap-align: center;
   background-color: #292929;
   overflow: hidden;
-  cursor: pointer;
+  cursor: grap;
   transition: opacity 0.2s ease-in-out;
   opacity: 0.4;
-
-  /* @media screen and (min-width: 1025px) {
-    width: fit;
-  } */
-
-  @media screen and (min-width: 1440px) {
-    width: 670px;
-  }
 }
 .exp-card-wrapper:hover {
   opacity: 1;
@@ -29,7 +21,6 @@
   margin: -10px -30px;
   padding: 0;
   width: 100%;
-  min-height: 620px;
   height: 100%;
 
   background-size: cover;
@@ -42,32 +33,29 @@
 }
 
 .card-img {
-  width: 8rem;
-  height: 8rem;
+  width: 6rem;
+  height: 6rem;
   border-radius: 50%;
 }
 
 .details-wrap {
-  margin: 70px 30px 0px 30px;
+  margin: 80px 20px 20px 20px;
   display: flex;
   flex-direction: column;
   align-items: start;
-
-  @media screen and (min-width: 1025px) {
-    padding: 0px;
-  }
 }
 
 .position-name {
-  font-size: 2.25rem;
-  font-weight: 300;
+  font-size: 1.5rem;
+  font-style: bold;
 }
 
 .company-name {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 700;
   margin-top: 0.25rem;
   text-transform: uppercase;
+  color: rgb(190, 189, 189);
 }
 
 .techs-used {
@@ -76,8 +64,8 @@
   margin-top: 0.5rem;
 }
 .skill-img {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2rem;
+  height: 2rem;
   border-radius: 20%;
   overflow: hidden;
   display: flex;
@@ -88,16 +76,21 @@
 .date {
   text-transform: uppercase;
   padding: 10px 0;
+  font-size: 0.8rem;
 }
 .summary {
   text-align: left;
-  max-width: 70%;
+  max-width: 100%;
+  font-size: 0.8rem;
 }
 
 .links {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  text-decoration: underline;
+  text-decoration-color: #737373;
+  gap: 2px;
+  font-size: 0.8rem;
 }
 
 @keyframes pulse {
@@ -138,6 +131,70 @@
 
 .list-point {
   margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 450px) {
+  .exp-card-wrapper {
+    width: 412px;
+  }
+
+  .background-top {
+    min-height: 440px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .exp-card-wrapper {
+    width: 500;
+  }
+
+  .background-top {
+    min-height: 500px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .exp-card-wrapper {
+    width: 650px;
+  }
+
+  .background-top {
+    min-height: 620px;
+  }
+
+  .card-img {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .details-wrap {
+    margin: 70px 30px 0px 30px;
+    padding: 0px;
+  }
+  .position-name {
+    font-size: 2.25rem;
+  }
+  .company-name {
+    font-size: 1.5rem;
+  }
+  .skill-img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  /* .date {
+
+  } */
+  .summary,
+  .date {
+    font-size: 1.2rem;
+    line-height: 27px;
+  }
+
+  .links {
+    gap: 8px;
+    font-size: 1.2rem;
+  }
 }
 /* 
 ========================

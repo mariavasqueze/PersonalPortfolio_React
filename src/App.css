@@ -124,9 +124,10 @@ button {
 /************ App ************/
 .App {
   background-color: #121212;
-  scroll-snap-type: y mandatory;
-  scroll-snap-align: center;
+  /* scroll-snap-type: y mandatory;
+  scroll-snap-align: center; */
   position: relative;
+  scroll-behavior: smooth;
 }
 
 .section {
@@ -142,8 +143,12 @@ button {
   text-transform: uppercase;
   font-family: "Mona-Sans", sans-serif;
   font-weight: 700;
-  font-size: 40px;
+  font-size: 30px;
   color: #737373;
+
+  @media screen and (min-width: 768px) {
+    font-size: 40px;
+  }
 }
 
 /************ Spline Main Scene ************/

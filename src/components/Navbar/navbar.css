@@ -45,7 +45,11 @@
   font-size: 16px;
   font-weight: 400;
   cursor: pointer;
-  transition: color 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar-link:hover {
+  opacity: 0.5;
 }
 
 .active {

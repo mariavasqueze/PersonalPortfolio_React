@@ -7,13 +7,14 @@ import projImg5 from "../../assets/img/mobileApp.jpeg";
 import happyHour from "../../assets/videos/happy-hour.mp4";
 import * as React from "react";
 import { Modal } from "@mui/material";
-
 import { motion } from "framer-motion";
+import "animate.css";
 import {
   AiOutlineClose,
   AiOutlineArrowRight,
   AiOutlineArrowLeft,
 } from "react-icons/ai";
+import Bottom from "../Bottom/Bottom";
 
 const projects = [
   {
@@ -34,7 +35,7 @@ const projects = [
     imageUrl: projImg1,
     demo: "https://gregarious-crumble-7647d8.netlify.app/",
     code: "https://github.com/mariavasqueze/React_OnlineStore",
-    video: happyHour,
+    video: null,
   },
   {
     title: "Node JS Rocket Tracker",
@@ -43,8 +44,8 @@ const projects = [
     desc2: "Techs used: Node, Express, Axios, MongoDB, React",
     imageUrl: projImg2,
     demo: "https://github.com/mariavasqueze/NodeJS_API_Nasa-Spacex",
-    code: "https://github.com/mariavasqueze/NodeJS_API_Nasa-Spacex",
-    video: happyHour,
+    code: null,
+    video: null,
   },
   {
     title: "Java Mobile App - Job Post Skill Matcher",
@@ -54,15 +55,16 @@ const projects = [
     imageUrl: projImg5,
     demo: "https://github.com/mariavasqueze/JavaMobileApp-JobPostSkillMatcher",
     code: "https://github.com/mariavasqueze/JavaMobileApp-JobPostSkillMatcher",
-    video: happyHour,
+    video: null,
   },
   {
     title: "Much more coming very soon!",
     description: "",
     desc2: "",
     imageUrl: comingSoon,
-    demo: "",
-    code: "",
+    demo: null,
+    code: null,
+    video: null,
   },
 ];
 
@@ -88,7 +90,7 @@ const Projects = () => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
+      animate={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
       className="projects-container"
     >
@@ -113,6 +115,7 @@ const Projects = () => {
             <ProjectCard project={projects[4]} />
           </div>
         </div>
+        <Bottom />
       </div>
       <div className="background-skewd" />
       <Modal className="modal" open={open} onClose={handleClose}>
@@ -124,28 +127,39 @@ const Projects = () => {
           variants={modalAnimation}
           transition={{ duration: 0.5 }}
         >
+          {selectedProject?.video === null ? (
+            <>
+              <img src={selectedProject.imageUrl} className="videoClass" />
+            </>
+          ) : (
+            <video className="videoClass" controls autoPlay>
+              <source src={selectedProject?.video} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          )}
           <div className="text-section-video">
-            <p className="title-proj">{selectedProject.title}</p>
-            <p className="description">{selectedProject.description}</p>
+            <p className="title-proj">{selectedProject?.title}</p>
+            <p className="description">{selectedProject?.description}</p>
             <div className="buttons">
-              <BlopButton
-                text={"Live Demo"}
-                onClickOption={() => {
-                  window.open(selectedProject.demo);
-                }}
-              />
-              <BlopButton
-                text={"Github Repo"}
-                onClickOption={() => {
-                  window.open(selectedProject.code);
-                }}
-              />
+              {selectedProject?.demo !== null && (
+                <BlopButton
+                  text={"Live Demo"}
+                  onClickOption={() => {
+                    window.open(selectedProject?.demo);
+                  }}
+                />
+              )}
+              {selectedProject?.code !== null && (
+                <BlopButton
+                  text={"Github Repo"}
+                  onClickOption={() => {
+                    window.open(selectedProject?.code);
+                  }}
+                />
+              )}
             </div>
           </div>
-          <video className="videoClass" controls>
-            <source src={selectedProject.video} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+
           <AiOutlineClose className="react-icon" onClick={handleClose} />
           <div
             className="bottom-right"
@@ -160,7 +174,7 @@ const Projects = () => {
               setOpenProjNumber(openProjNumber + 1);
             }}
           >
-            <p className="arrow-text">Previous</p>
+            <p className="arrow-text">Next</p>
             <AiOutlineArrowRight />
           </div>
           <div
@@ -177,7 +191,7 @@ const Projects = () => {
             }}
           >
             <AiOutlineArrowLeft />
-            <p className="arrow-text">Next</p>
+            <p className="arrow-text">Previous</p>
           </div>
         </motion.div>
       </Modal>

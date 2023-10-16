@@ -1,13 +1,10 @@
 import "./spline-background.css";
 import Spline from "@splinetool/react-spline";
 
-export default function SplineBackground({}) {
+export default function SplineBackground({ url }) {
   return (
     <div className="spline-wrapper">
-      <Spline
-        className="spline-background"
-        scene="https://prod.spline.design/Pcz3HZiVYE9vnMhx/scene.splinecode"
-      />
+      <Spline className="spline-background" scene={url} />
     </div>
   );
 }
