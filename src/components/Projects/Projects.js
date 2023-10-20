@@ -6,7 +6,7 @@ import projImg4 from "../../assets/img/homePage.png";
 import projImg5 from "../../assets/img/mobileApp.jpeg";
 import happyHour from "../../assets/videos/happy-hour.mp4";
 import * as React from "react";
-import { Modal } from "@mui/material";
+import { Modal, Fade } from "@mui/material";
 import { motion } from "framer-motion";
 import "animate.css";
 import {
@@ -84,18 +84,21 @@ const Projects = () => {
   const modalAnimation = {
     hidden: { opacity: 0, y: -50 },
     visible: { opacity: 1, y: 0 },
-    exit: { opacity: 0, y: 50 },
+    exit: { opacity: 0, y: -50 },
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1.5 }}
+    <div
+      // initial={{ opacity: 0 }}
+      // whileInView={window.innerWidth > 1024 ? { opacity: 1 } : {}}
+      // animate={window.innerWidth < 1024 ? { opacity: 1 } : {}}
+      // transition={{ duration: 1.5 }}
       className="projects-container"
     >
-      <h3 className="main-title projects-title">Projects</h3>
-      <div className="projects-wrap">
+      <h4 className="main-title projects-title animate__animated animate__fadeInDown animate__delay-1s">
+        Projects
+      </h4>
+      <div className="projects-wrap animate__animated animate__fadeInDown animate__delay-1s">
         <div className="section1">
           <div className="item-wrap" onClick={() => handleOpen(0)}>
             <ProjectCard project={projects[0]} />
@@ -122,7 +125,7 @@ const Projects = () => {
         <motion.div
           className="modal-wrapper"
           initial="hidden"
-          animate={open ? "visible" : "hidden"}
+          animate="visible"
           exit="exit"
           variants={modalAnimation}
           transition={{ duration: 0.5 }}
@@ -195,7 +198,7 @@ const Projects = () => {
           </div>
         </motion.div>
       </Modal>
-    </motion.div>
+    </div>
   );
 };
 
@@ -203,7 +206,7 @@ export default Projects;
 
 export const ProjectCard = ({ project }) => {
   return (
-    <div className="project-container project-hover">
+    <div className="project-container project-hover ">
       <img
         alt={project.title}
         src={project.imageUrl}

@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import { Grid } from "react-awesome-spinners";
 import Projects from "./components/Projects/Projects";
 import "./App.css";
 import Hero from "./components/Hero/Hero";
@@ -15,13 +16,13 @@ function App() {
   // function onLoad(spline) {
   //   const projects = spline.findObjectByName("PROJECTS");
   //   projectsRef.current = projects;
-  // }
+  // }\
 
   return (
     <div className="App">
-      <NavBar />
+      <NavBar isLoaded={isLoaded} />
       <section id="hero" className="section">
-        <Hero />
+        <Hero setIsLoaded={setIsLoaded} isLoaded={isLoaded} />
       </section>
       <div className="main-body">
         <section id="about" className="section">

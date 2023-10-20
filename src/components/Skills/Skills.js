@@ -13,6 +13,7 @@ import Next from "../../assets/img/next.png";
 import TypeScript from "../../assets/img/typescript.png";
 import Python from "../../assets/img/python.png";
 import { motion } from "framer-motion";
+import "animate.css";
 
 const SKILLS = [
   { name: "HTML", file: HTML, directionLeft: true },
@@ -32,13 +33,15 @@ const SKILLS = [
 
 const Skills = () => {
   return (
-    <motion.div className="skill-wrapper">
-      <h3 className="skills-title">Skills</h3>
+    <div className="skill-wrapper">
+      <h4 className="skills-title animate__animated animate__fadeInDown">
+        Skills
+      </h4>
 
       <div className="skills-grid">
         <SkillsSpline />
       </div>
-    </motion.div>
+    </div>
   );
 };
 

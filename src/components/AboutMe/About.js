@@ -1,12 +1,14 @@
 import "./about-me.css";
 import MeImage from "../../assets/img/maria.png";
-
+import "animate.css";
 import { motion } from "framer-motion";
 
 const AboutSection = () => {
   return (
     <div className="about-container">
-      <h2 className="main-title">About</h2>
+      <h4 className="main-title animate__animated animate__fadeInDown">
+        About
+      </h4>
       <div className="content-image">
         <motion.img
           src={MeImage}

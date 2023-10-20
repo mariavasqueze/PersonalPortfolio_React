@@ -7,7 +7,7 @@ import navIcon1 from "../../assets/img/linkedin-icon.svg";
 import navIcon2 from "../../assets/img/git_image.png";
 import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
 
-const NavBar = () => {
+const NavBar = ({ isLoaded }) => {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
 
@@ -29,9 +29,13 @@ const NavBar = () => {
     setActiveLink(link);
   };
 
+  if (!isLoaded) {
+    return <span></span>;
+  }
+
   return (
     <div className={`navbar-wrapper `}>
-      <div className="left-side animate__animated animate__fadeInLeft">
+      <div className="left-side animate__animated animate__fadeInLeft animate__delay-1s">
         <a
           href="#hero"
           className="logo-mv"
@@ -69,7 +73,7 @@ const NavBar = () => {
           </a>
         </div>
       </div>
-      <div className="right-side animate__animated animate__fadeInRight">
+      <div className="right-side animate__animated animate__fadeInRight animate__delay-1s">
         <div className="social-icon">
           <a href="https://github.com/mariavasqueze" target="_blank">
             <img src={navIcon2} alt="github icon" />

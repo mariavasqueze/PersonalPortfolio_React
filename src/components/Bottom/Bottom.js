@@ -8,9 +8,9 @@ import Github from "../../assets/img/github_white.png";
 function Bottom() {
   return (
     <div className="bottom-container">
-      <h3 className="bottom-title animate__animated animate__fadeInDown">
+      <h4 className="bottom-title animate__animated animate__fadeInDown">
         Contact
-      </h3>
+      </h4>
       <div className="contact-items ">
         <div className="contact-item animate__animated animate__fadeInLeft">
           <a

@@ -1,6 +1,7 @@
 import "./experience.css";
 import React, { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
+import "animate.css";
 import ExperienceCard from "../ExperienceCard/ExperienceCard";
 import imageSolo from "../../assets/img/sologenic.jpeg";
 import idoLaunchpad from "../../assets/img/ido-launchpad.png";
@@ -128,7 +129,9 @@ function Experience() {
       id="experience"
       className="exp-wrapper"
     >
-      <h3 className="experience-title">Experience</h3>
+      <h4 className="experience-title animate__animated animate__fadeInDown">
+        Experience
+      </h4>
       <div
         ref={experienceCardsRef}
         className="experience-cards"

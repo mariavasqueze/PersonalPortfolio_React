@@ -5,7 +5,7 @@ import "animate.css";
 import gsap from "gsap";
 import SplineBackground from "../SplineBackground/SplineBackground";
 
-const Hero = () => {
+const Hero = ({ isLoaded, setIsLoaded }) => {
   const headLine = new SplitType("h1");
   const secondHeadLine = new SplitType("h2");
   const myText2 = new SplitType("h3", { charClass: "char2" });
@@ -14,7 +14,7 @@ const Hero = () => {
   tl.from(".char", {
     y: -100,
     stagger: 0.05,
-    delay: 0.7,
+    delay: 1,
   })
     .from(
       ".char2",
@@ -33,7 +33,11 @@ const Hero = () => {
 
   return (
     <div className="hero-container">
-      <SplineBackground url="https://prod.spline.design/Pcz3HZiVYE9vnMhx/scene.splinecode" />
+      <SplineBackground
+        isLoaded={isLoaded}
+        setIsLoaded={setIsLoaded}
+        url="https://prod.spline.design/Pcz3HZiVYE9vnMhx/scene.splinecode"
+      />
       <h1 className="title">Hi There!</h1>
       <h2 className="title">I'm Maria</h2>
       <h3 className="title-two">Software Developer</h3>

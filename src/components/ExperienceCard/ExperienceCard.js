@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 function ExperienceCard({ experience }) {
+  console.log(window.innerWidth);
   return (
     <article className="exp-card-wrapper">
       <div
@@ -12,7 +13,8 @@ function ExperienceCard({ experience }) {
         <motion.img
           initial={{ opacity: 0, y: -100 }}
           transition={{ duration: 1.2 }}
-          whileInView={{ opacity: 1, y: 10 }}
+          whileInView={window.innerWidth > 1024 ? { opacity: 1, y: 10 } : {}}
+          animate={window.innerWidth < 1024 ? { opacity: 1, y: 10 } : {}}
           viewport={{ once: true }}
           className="card-img"
           src={experience.companyImage}
@@ -23,7 +25,6 @@ function ExperienceCard({ experience }) {
           {experience.techs && (
             <div className="techs-used">
               {experience.techs.map((tech, index) => {
-                console.log(tech);
                 return <img className="skill-img" src={tech} key={index} />;
               })}
             </div>
