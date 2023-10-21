@@ -1,13 +1,10 @@
 import "./navbar.css";
 import { useEffect, useState } from "react";
 import "animate.css";
-import { BlopButton } from "../Projects/Projects";
-import logo from "../../assets/img/MV_Logo.svg";
 import navIcon1 from "../../assets/img/linkedin-icon.svg";
 import navIcon2 from "../../assets/img/git_image.png";
-import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
 
-const NavBar = ({ isLoaded }) => {
+const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
 
@@ -28,10 +25,6 @@ const NavBar = ({ isLoaded }) => {
   const onUpdateActiveLink = (link) => {
     setActiveLink(link);
   };
-
-  if (!isLoaded) {
-    return <span></span>;
-  }
 
   return (
     <div className={`navbar-wrapper `}>

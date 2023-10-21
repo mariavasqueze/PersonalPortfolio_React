@@ -3,7 +3,6 @@ import React from "react";
 import { motion } from "framer-motion";
 
 function ExperienceCard({ experience }) {
-  console.log(window.innerWidth);
   return (
     <article className="exp-card-wrapper">
       <div

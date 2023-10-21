@@ -13,16 +13,11 @@ function App() {
   const projectsRef = useRef();
   const [isLoaded, setIsLoaded] = useState(false);
 
-  // function onLoad(spline) {
-  //   const projects = spline.findObjectByName("PROJECTS");
-  //   projectsRef.current = projects;
-  // }\
-
   return (
     <div className="App">
-      <NavBar isLoaded={isLoaded} />
+      <NavBar />
       <section id="hero" className="section">
-        <Hero setIsLoaded={setIsLoaded} isLoaded={isLoaded} />
+        <Hero />
       </section>
       <div className="main-body">
         <section id="about" className="section">

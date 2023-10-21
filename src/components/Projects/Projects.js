@@ -174,7 +174,9 @@ const Projects = () => {
                     : openProjNumber + 1
                 ]
               );
-              setOpenProjNumber(openProjNumber + 1);
+              setOpenProjNumber(
+                openProjNumber === projects.length - 1 ? 0 : openProjNumber + 1
+              );
             }}
           >
             <p className="arrow-text">Next</p>
@@ -190,7 +192,9 @@ const Projects = () => {
                     : openProjNumber - 1
                 ]
               );
-              setOpenProjNumber(openProjNumber - 1);
+              setOpenProjNumber(
+                openProjNumber === 0 ? projects.length - 1 : openProjNumber - 1
+              );
             }}
           >
             <AiOutlineArrowLeft />
@@ -227,14 +231,14 @@ export const ProjectCard = ({ project }) => {
 
 export const BlopButton = ({ text, onClickOption }) => {
   return (
-    <button class="blob-btn" onClick={onClickOption}>
+    <button className="blob-btn" onClick={onClickOption}>
       {text}
-      <span class="blob-btn__inner">
-        <span class="blob-btn__blobs">
-          <span class="blob-btn__blob"></span>
-          <span class="blob-btn__blob"></span>
-          <span class="blob-btn__blob"></span>
-          <span class="blob-btn__blob"></span>
+      <span className="blob-btn__inner">
+        <span className="blob-btn__blobs">
+          <span className="blob-btn__blob"></span>
+          <span className="blob-btn__blob"></span>
+          <span className="blob-btn__blob"></span>
+          <span className="blob-btn__blob"></span>
         </span>
       </span>
     </button>
