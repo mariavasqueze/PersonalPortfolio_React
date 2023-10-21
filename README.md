@@ -4,7 +4,7 @@ Hi there! My name is Maria. I’m a full-stack developer with a focus on
 React and web development.
 This is my porfolio showcasing my skills and top latest projects
 
-![Portfolio Screen-shot](src/assets/img/portfolio-screen-shot-for--readme.png "Portfolio Screen-shot")
+![Portfolio Screen-shot](src/assets/img/portfolio-screen-shot-for--readme.png)
 
 ## Top Skills:
 
