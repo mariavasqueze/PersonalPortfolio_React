@@ -2,10 +2,7 @@ import "./projects.css";
 import projImg2 from "../../assets/img/project2-nasa-img.png";
 import comingSoon from "../../assets/img/coming-soon.jpeg";
 import projImg4 from "../../assets/img/homePage.png";
-import happyHour from "../../assets/videos/happy-hour.mp4";
-import clothingStoreVideo from "../../assets/videos//clothingStoreVideo.mov";
 import clothingStoreSnap from "../../assets/img/clothingStoreSnap.png";
-import mealsAppVideo from "../../assets/videos/mealsFinals.mp4";
 import mealsToGoSnap from "../../assets/img/mealsToGoSnap.png";
 import * as React from "react";
 import { Modal } from "@mui/material";
@@ -15,6 +12,7 @@ import {
   AiOutlineClose,
   AiOutlineArrowRight,
   AiOutlineArrowLeft,
+  np,
 } from "react-icons/ai";
 import Bottom from "../Bottom/Bottom";
 
@@ -27,7 +25,7 @@ const projects = [
     imageUrl: projImg4,
     demo: "https://www.happyhourlocator.ca/",
     code: "https://github.com/mariavasqueze/happy-hour-locator",
-    video: happyHour,
+    video: "YlOUUW8FuRc?si=r0-57RuvG7av3jIB",
   },
   {
     title: "React Native App - Meals To Go App",
@@ -37,7 +35,7 @@ const projects = [
     imageUrl: mealsToGoSnap,
     demo: null,
     code: "https://github.com/mariavasqueze/MealsToGo_React_Native",
-    video: mealsAppVideo,
+    video: "3wprBN1H6gs?si=RPE-PtAsja9fJB3W",
   },
   {
     title: "React / Redux Online Store",
@@ -47,7 +45,7 @@ const projects = [
     imageUrl: clothingStoreSnap,
     demo: "https://gregarious-crumble-7647d8.netlify.app/",
     code: "https://github.com/mariavasqueze/React_OnlineStore",
-    video: clothingStoreVideo,
+    video: "FpknlA7Hhtc?si=-dCQ6DtxudTAZeJc",
   },
   {
     title: "Node JS Rocket Tracker",
@@ -137,10 +135,21 @@ const Projects = () => {
               <img src={selectedProject.imageUrl} className="videoClass" />
             </>
           ) : (
-            <video className="videoClass" controls autoPlay>
-              <source src={selectedProject?.video} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            // <video className="videoClass" controls autoPlay>
+            //   <source src={selectedProject?.video} type="video/mp4" />
+            //   Your browser does not support the video tag.
+            // </video>
+            <div className="video-wrapper">
+              <iframe
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+                title={selectedProject.title}
+                width="100%"
+                height="100%"
+                src={`https://www.youtube.com/embed/${selectedProject.video}`}
+              ></iframe>
+            </div>
           )}
           <div className="text-section-video">
             <p className="title-proj">{selectedProject?.title}</p>
