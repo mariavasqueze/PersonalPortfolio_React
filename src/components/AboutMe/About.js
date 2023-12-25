@@ -22,21 +22,19 @@ const AboutSection = () => {
 
       <div className="text-wrapper">
         <h4 className="about-me-text">
-          A <span className="short">short</span> background:
+          {/* A <span className="short">short</span> background: */}
         </h4>
 
         <p className="desc-me">
-          Hi, I'm Maria, I'm a software developer currently living in Vancouver
-          and working as a Front End Developer at{" "}
+          
+          Hi there! My name is Maria, I'm a Full Stack developer currently working as a Front End Developer in the Fintech industry at{" "}
           <a className="link" href="https://sologenic.org/" target="_blank">
             Sologenic.
             <br />
           </a>
-          I have a background in Business and Marketing, but decided to go full
-          time into software development because it's my passion. I moved to
-          Canada from Colombia 🇨🇴 and studied to be a full stack developer. I
+          I'm Spanish/Colombian and I'm currently living in Vancouver, Canada. I
           work everyday with React and Next.js in Javascript and Typescript
-          working on UI and functionality. Please check out more of my skills
+          working on amazing UI and functionalities. Please check out more of my work and project experience
           below.
         </p>
       </div>
