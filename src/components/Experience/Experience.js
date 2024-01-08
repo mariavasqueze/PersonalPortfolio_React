@@ -51,7 +51,7 @@ const EXPERIENCES = [
     link: "https://sologenic.com/",
     companyImage: imageSolo,
     techs: [Typescript, JavaScript, ReactImg, Redux, Next],
-    date: "April 2023 - Present",
+    date: "Jan 2023 - April 2023",
     summary:
       "Developed the Front End UI and functionality of a new Initial Decentralized Offering creation platform using Next.js, enabling users to seamlessly launch crypto projects and tokens",
     media: {

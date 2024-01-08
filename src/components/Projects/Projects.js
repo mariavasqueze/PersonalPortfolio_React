@@ -30,7 +30,7 @@ const projects = [
   {
     title: "React Native App - Meals To Go App",
     description:
-      "React Native App that uses firebase for authentication and function handling to find restaurant in any city using Google Maps API, add favorites and order a min dish from the restaurant, handling the payment with Stripe. Made for both, Android and iOS.",
+      "React Native App that uses firebase for authentication and function handling to find restaurants in any city using Google Maps API, add favorites and order a main dish from the restaurant, handling the payment with Stripe. Made for both, Android and iOS.",
     desc2: "Tech stack: React Native, Javascript, Firebase, Cloud, Stripe",
     imageUrl: mealsToGoSnap,
     demo: null,
