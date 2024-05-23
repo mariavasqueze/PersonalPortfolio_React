@@ -13,15 +13,17 @@ function ExperienceCard({ experience, toLink = false }) {
         className="background-top"
         style={{ backgroundImage: `url(${experience.media.img})` }}
       >
-        <motion.img
-          initial={{ opacity: 0, y: -100 }}
-          transition={{ duration: 1.2 }}
-          whileInView={window.innerWidth > 1024 ? { opacity: 1, y: 10 } : {}}
-          animate={window.innerWidth < 1024 ? { opacity: 1, y: 10 } : {}}
-          viewport={{ once: true }}
-          className="card-img"
-          src={experience.companyImage}
-        />
+        {experience.companyImage && (
+          <motion.img
+            initial={{ opacity: 0, y: -100 }}
+            transition={{ duration: 1.2 }}
+            whileInView={window.innerWidth > 1024 ? { opacity: 1, y: 10 } : {}}
+            animate={window.innerWidth < 1024 ? { opacity: 1, y: 10 } : {}}
+            viewport={{ once: true }}
+            className="card-img"
+            src={experience.companyImage}
+          />
+        )}
         <div className="details-wrap">
           <h4 className="position-name">{experience.position}</h4>
           <p className="company-name">{experience.company}</p>

@@ -21,7 +21,6 @@ const EXPERIENCES = [
     position: "Intermediate Web Developer",
     company: "Shift",
     link: "https://shift.com/",
-    companyImage: "",
     techs: [Typescript, JavaScript, ReactImg, Redux, Next, Vite],
     date: "March 2024 - Present",
     summary:
