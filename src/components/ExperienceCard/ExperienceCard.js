@@ -2,9 +2,13 @@ import "./experience-card.css";
 import React from "react";
 import { motion } from "framer-motion";
 
-function ExperienceCard({ experience }) {
+function ExperienceCard({ experience, toLink = false }) {
   return (
-    <article className="exp-card-wrapper">
+    <article
+      className="exp-card-wrapper"
+      onClick={() => (toLink ? window.open(experience.link) : "")}
+      style={{ cursor: toLink ? "pointer" : "" }}
+    >
       <div
         className="background-top"
         style={{ backgroundImage: `url(${experience.media.img})` }}
@@ -24,7 +28,14 @@ function ExperienceCard({ experience }) {
           {experience.techs && (
             <div className="techs-used">
               {experience.techs.map((tech, index) => {
-                return <img className="skill-img" src={tech} key={index} />;
+                return (
+                  <img
+                    className="skill-img"
+                    src={tech}
+                    key={index}
+                    alt="skill"
+                  />
+                );
               })}
             </div>
           )}
@@ -40,6 +51,7 @@ function ExperienceCard({ experience }) {
                     className="proj-link"
                     href={link.link}
                     target="_blank"
+                    rel="noreferrer"
                   >
                     {link.name}
                   </a>
